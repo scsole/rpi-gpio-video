@@ -9,13 +9,13 @@ import time
 import subprocess
 import os
 
-PIR_PIN = 11                    # GPIO17
+PIR_PIN = 11                    # GPIO11
 GPIO.setmode(GPIO.BOARD)        # Use header pin numbers
 GPIO.setup(PIR_PIN, GPIO.IN)
 
 running = False         # Is a video currently playing?
 player = "omxplayer"    # The video player being used
-video_path = "/home/pi/Videos/trim.mp4" # Path to video
+video_path = "/home/pi/video.mp4"   # Path to video file
 
 child = 0
 
