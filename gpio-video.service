@@ -1,0 +1,10 @@
+[Unit]
+Description=Trigger video playback based on GPIO events
+
+[Service]
+ExecStartPre=/bin/sleep 10
+ExecStart=/home/pi/rpi-gpio-video/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
