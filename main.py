@@ -28,7 +28,7 @@ try:
     print("Waiting for motion")
     
     while True:
-        if GPIO.input(PIR_PIN):
+        if not GPIO.input(PIR_PIN):
             if running == False:
                 print("Motion detected")
                 child = subprocess.Popen([player, video_path, opt])
