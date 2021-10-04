@@ -42,7 +42,7 @@ try:
                 else:
                     print("WARN: Video files not accessible, ignoring motion")
                     continue
-                child = subprocess.Popen([player, video_path, opt])
+                child = subprocess.Popen([player, '-o', 'local', video_path, opt])
                 running = True
                 print("Playing video")
 
